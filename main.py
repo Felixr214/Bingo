@@ -72,7 +72,6 @@ def getTask(operator):
     elif operator == 1:
         num1, num2, result = getSubtractionTask()
 
-
     elif operator == 2:
         num1, num2, result = getMultiplicationTask()
     else:
@@ -106,6 +105,7 @@ tasks_ = np.array(tasks)
 results = list(results_[indices])
 tasks = list(tasks_[indices])
 
+# Task pdf
 c = canvas.Canvas("Karten/aufgaben.pdf")
 c.setFont("Courier", 12)
 y = 750
@@ -118,6 +118,8 @@ for a in range(len(results)):
     c.drawString(100, y-a*line_height, task_string)
 
 c.save()
+
+# Card pdfs
 
 cards = [Card.Card(all_values, results, True, moves, 0)]
 cards += [Card.Card(all_values, results, False, moves, a) for a in range(1, max_cards)]

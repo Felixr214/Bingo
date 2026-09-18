@@ -32,14 +32,14 @@ class Card:
             rows[a] = 0
             columns[a] = 0
         i = 0
-        wins = []
+        matches = []
         for res in results:
             i += 1
             if res not in self.card_values:
                 continue
             index = self.card_values.index(res)
 
-            wins.append(int(res))
+            matches.append(int(res))
             row = index // 5
             col = index % 5
 
@@ -55,7 +55,7 @@ class Card:
                 if i != self.moves and self.winner:
                     return False
                 if self.winner:
-                    print(wins)
+                    print(matches)
                     print(lr_diagonal)
                     print(rl_diagonal)
                     print(rows)

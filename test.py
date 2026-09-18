@@ -1,3 +1,7 @@
 import numpy as np
 
-print(np.random.randint(1,10))
+max_tasks = 100
+
+for i in range(max_tasks):
+    operator = 3 - (4 * i // max_tasks)
+    print(operator)
