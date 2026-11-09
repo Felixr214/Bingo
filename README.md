@@ -1,1 +1,1 @@
-# Bingo Game using simple maths tasks as calls
+# Bingo Game using simple math exercises as calls
